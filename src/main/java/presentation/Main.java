@@ -7,7 +7,7 @@ public class Main {
 
   public static void main(String[] args) {
 	Computable mc = new MatrixComputations();
-	int[][] mas = mc.fillSnailMatrix(7);	
+	int[][] mas = mc.fillSnailMatrix(4);	
 	
 	/*for (int i = 0; i < mas.length;i++) {
 	  for (int j = 0;j < mas.length;j++) {

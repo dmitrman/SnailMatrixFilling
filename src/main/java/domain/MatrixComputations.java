@@ -14,16 +14,15 @@ public class MatrixComputations implements Computable{
     /** a number to fill in a matrix */
     int num = 1;
     /* matrix */
-    int[][] matrix =new int[size][size];
+    int[][] matrix = new int[size][size];
     /* number of row */
     int i = matrix.length - 1;
     /* number of column */
     int j = matrix.length - 1;
 	/* smechedie */
-    int w = 0;
-    int iter = 61;
+    int w = 0;   
     
-    while ((cycle > 0) && (iter > 0)) {
+    while (num < size*size + 1) {
       if (cycle == 1) {
         if (j > -1 + w) {
         	matrix[i][j] = num;
@@ -71,19 +70,16 @@ public class MatrixComputations implements Computable{
           	j--;
           	w++;           
           }
-        }
-       
-       System.out.println("============================");
-       for (int r = 0; r < matrix.length;r++) {
-    		  for (int t = 0;t < matrix.length;t++) {
-    			  System.out.print(matrix[r][t]+" ");
-    		  }
-    		  System.out.println();
-       }
-       
-       iter--;
-    	  
+        } 
+               
     }
+    System.out.println("============================");
+    for (int r = 0; r < matrix.length;r++) {
+ 		  for (int t = 0;t < matrix.length;t++) {
+ 			  System.out.print(matrix[r][t]+" ");
+ 		  }
+ 		  System.out.println();
+    } 
     return matrix;
   }
 
